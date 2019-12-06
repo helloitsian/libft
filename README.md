@@ -1,2 +1,2 @@
 # libft
-libft 42
+My custom standard library written in C.

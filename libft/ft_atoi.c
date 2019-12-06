@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	skip_stuff(const char *str, int i)
+static int	skip_whitespace(const char *str, int i)
 {
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
 			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
@@ -35,7 +35,7 @@ int			ft_atoi(const char *str)
 	int sign;
 
 	res = 0;
-	i = skip_stuff(str, 0);
+	i = skip_whitespace(str, 0);
 	sign = find_sign(str, i);
 	if (str[i] == '-' || str[i] == '+')
 		i += 1;
